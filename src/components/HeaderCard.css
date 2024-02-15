@@ -1,0 +1,7 @@
+.container {
+  padding: 12px;
+}
+
+.container[data-isOpen="true"] {
+  padding: 22px 32px 0;
+}

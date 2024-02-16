@@ -1,6 +1,6 @@
 import React from 'react'
 
-import img from '../../../assets/background.jpeg'
+import img from '../../../../assets/background.jpeg'
 
 import './BackgroundImg.css'
 
@@ -9,7 +9,7 @@ const BackgroundImg = () => {
     <div className="background-img-container">
       <div className="background-img-wrapper">
         <div className="background-img-inner-wrapper">
-          <div classNam="background-img-inner-inner-wrapper">
+          <div className="background-img-inner-inner-wrapper">
             <img src={img} />
           </div>
         </div>

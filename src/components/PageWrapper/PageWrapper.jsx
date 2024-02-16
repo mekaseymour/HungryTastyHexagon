@@ -1,11 +1,11 @@
 import React from "react";
 
-import "./PageWrapper.scss";
+import "./PageWrapper.css";
 
-const PageWrapper = ({ children }) => {
+const PageWrapper = ({ children, isFullScreen }) => {
   return (
-    <div className="page-wrapper-container">
-      <div className="pwc-wrapper">{children}</div>
+    <div className="page-wrapper-container" style={{ padding: isFullScreen ? "0px" : "20px" }}>
+          <div className="pwc-wrapper">{children}</div>
     </div>
   );
 };

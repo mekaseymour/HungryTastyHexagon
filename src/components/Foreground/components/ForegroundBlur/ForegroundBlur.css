@@ -1,0 +1,12 @@
+.fg-blur-container {
+  cursor: pointer;
+  flex: none;
+  inset: 0;
+  overflow: visible;
+  pointer-events: none;
+  position: absolute;
+  user-select: none;
+  z-index: 3;
+  backdrop-filter: blur(0px);
+  opacity: 1;
+}

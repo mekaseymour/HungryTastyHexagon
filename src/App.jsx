@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
-import BioCard from "./components/BioCard";
+import PageWrapper from "./components/PageWrapper";
+import Background from './components/Background'
+import Foreground from "./components/Foreground";
 
 import "./App.css";
 
@@ -9,8 +11,9 @@ export default function App() {
   const handleToggle = () => setIsOpen(!isOpen);
 
   return (
-    <main style={{ padding: isOpen ? "0px" : "20px" }}>
-      <BioCard isOpen={isOpen} onToggle={handleToggle} />
-    </main>
+    <PageWrapper isFullScreen={isOpen}>
+      <Background />
+      <Foreground handleBlockToggle={handleToggle} isOpen={isOpen} />
+    </PageWrapper>
   );
 }

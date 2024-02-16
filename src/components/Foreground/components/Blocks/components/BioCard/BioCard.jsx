@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
-import Card from "../Card.jsx";
 import ProfileImg from "./components/ProfileImg.jsx";
 
 import "./BioCard.css";

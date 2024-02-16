@@ -1,0 +1,8 @@
+.blocks-container {
+  display: flex;
+  flex: 1 0 0px;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  z-index: 2;
+}

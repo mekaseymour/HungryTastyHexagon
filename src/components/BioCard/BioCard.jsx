@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-import Card from "./Card.jsx";
+import Card from "../Card.jsx";
+import ProfileImg from "./components/ProfileImg.jsx";
 
-import "./HeaderCard.css";
+import "./BioCard.css";
 
 // referencing this https://codesandbox.io/p/sandbox/framer-motion-2-scale-correction-z4tgr?file=%2Fsrc%2FApp.js%3A23%2C3-33%2C5&from-embed=
 
-const HeaderCard = ({ isOpen, onToggle }) => {
+const BioCard = ({ isOpen, onToggle }) => {
   return (
     <motion.div
       data-block-name="bio"
@@ -21,7 +22,7 @@ const HeaderCard = ({ isOpen, onToggle }) => {
         isOpen
           ? {
               backdropFilter: "blur(0px)",
-              backgroundColor: "rgba(0, 0, 0, 0)",
+              backgroundColor: "rgba(0, 0, 0, 0.1)",
               borderRadius: "32px",
               opacity: "1",
             }
@@ -36,9 +37,20 @@ const HeaderCard = ({ isOpen, onToggle }) => {
       onClick={onToggle}
     >
       {/* <motion.div layout className="child" /> */}
-      hello world
+      <div className="img-name-and-skills">
+        <ProfileImg />
+        <div>
+          <div>
+            hello name
+          </div>
+          <div>
+            hello skills
+          </div>
+        </div>
+      </div>
+      <div>hello bio text</div>
     </motion.div>
   );
 };
 
-export default HeaderCard;
+export default BioCard;

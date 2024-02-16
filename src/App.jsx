@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import HeaderCard from "./components/HeaderCard.jsx";
+import BioCard from "./components/BioCard";
 
 import "./App.css";
 
@@ -10,7 +10,7 @@ export default function App() {
 
   return (
     <main style={{ padding: isOpen ? "0px" : "20px" }}>
-      <HeaderCard isOpen={isOpen} onToggle={handleToggle} />
+      <BioCard isOpen={isOpen} onToggle={handleToggle} />
     </main>
   );
 }

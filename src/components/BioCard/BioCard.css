@@ -5,3 +5,7 @@
 .container[data-isOpen="true"] {
   padding: 22px 32px 0;
 }
+
+.img-name-and-skills {
+  display: flex;
+}

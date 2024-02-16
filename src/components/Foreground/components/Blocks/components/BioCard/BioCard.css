@@ -1,5 +1,33 @@
 .container {
   padding: 12px;
+  color: white;
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+
+  .bio {
+    margin: 0;
+    font-size: 1em;
+  }
+
+  .name {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.5em;
+  }
+
+  .name-and-skill {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .skill {
+    background-color: rgba(230, 229, 229, 0.2);
+    border-radius: 12px;
+    padding: 6px 12px;
+    width: fit-content;
+  }
 }
 
 .container[data-isOpen="true"] {
@@ -8,4 +36,7 @@
 
 .img-name-and-skills {
   display: flex;
+  gap: 12px;
+  transform: none;
+  transform-origin: 50% 50% 0px;
 }

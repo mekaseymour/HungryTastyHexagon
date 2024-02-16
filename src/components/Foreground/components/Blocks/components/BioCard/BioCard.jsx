@@ -21,7 +21,7 @@ const BioCard = ({ isOpen, onToggle }) => {
         isOpen
           ? {
               backdropFilter: "blur(0px)",
-              backgroundColor: "rgba(0, 0, 0, 0.1)",
+              backgroundColor: "rgba(0, 0, 0, 0)",
               borderRadius: "32px",
               opacity: "1",
             }
@@ -36,18 +36,21 @@ const BioCard = ({ isOpen, onToggle }) => {
       onClick={onToggle}
     >
       {/* <motion.div layout className="child" /> */}
-      <div className="img-name-and-skills">
-        <ProfileImg />
-        <div>
-          <div>
-            hello name
-          </div>
-          <div>
-            hello skills
-          </div>
+      <motion.div className="img-name-and-skills" style={isOpen ? {
+      flexDirection: 'column-reverse'
+      } : {flexDirection: 'row'}}
+        transition={{
+          opacity: { ease: "linear" },
+          layout: { duration: 0.3 },
+        }}
+      >
+        <ProfileImg shouldBeFullScreen={isOpen} />
+        <div className="name-and-skill">
+          <h1 className="name">Elephant Brand</h1>
+          <div className="skill">Creative direction</div>
         </div>
-      </div>
-      <div>hello bio text</div>
+      </motion.div>
+      <p className="bio">hello bio text</p>
     </motion.div>
   );
 };

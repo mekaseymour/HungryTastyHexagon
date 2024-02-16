@@ -1,19 +1,20 @@
 import React from "react";
+import { motion } from 'framer-motion';
 
 import img from "../../../../../../../assets/logo.png";
 
 import "./ProfileImg.css";
 
-const ProfileImg = () => {
+const ProfileImg = ({ shouldBeFullScreen}) => {
   return (
-    <div className="profile-img-container">
+    <motion.div className="profile-img-container" animate={{ width: shouldBeFullScreen ? '100%' : '64px', height: shouldBeFullScreen ? 'auto' : '64px', transition: { duration: 0.5 } }}>
       <div className="profile-img-wrapper">
         <img
           src={img}
           alt="profile-img"
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

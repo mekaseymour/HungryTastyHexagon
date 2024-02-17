@@ -1,0 +1,16 @@
+.actions-footer-container {
+  z-index: 4;
+  padding: 0 24px 35px 24px;
+
+  button {
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 100px;
+    padding: 8px 32px;
+    border: none;
+    height: 54px;
+  }
+
+  svg {
+    stroke-width: 3;
+  }
+}

@@ -12,45 +12,40 @@ const BioCard = ({ isOpen, onToggle }) => {
     <motion.div
       data-block-name="bio"
       layout
-      data-isOpen={isOpen}
       transition={{
         opacity: { ease: "linear" },
         layout: { duration: 0.3 },
       }}
-      style={
-        isOpen
+      animate={{
+        ...isOpen
           ? {
               backdropFilter: "blur(0px)",
               backgroundColor: "rgba(0, 0, 0, 0)",
               borderRadius: "32px",
               opacity: "1",
+              padding: "60px 32px 32px",
             }
           : {
               backdropFilter: "blur(30px)",
               backgroundColor: "rgba(0, 0, 0, 0.25)",
               borderRadius: "20px",
               opacity: "1",
-            }
-      }
+              padding: "12px",
+            },
+        transition: { duration: 0.5, ease: 'linear' }
+      }}
       className="container"
-      onClick={onToggle}
+      onClick={isOpen ? () => {} : onToggle}
     >
-      {/* <motion.div layout className="child" /> */}
-      <motion.div className="img-name-and-skills" style={isOpen ? {
-      flexDirection: 'column-reverse'
-      } : {flexDirection: 'row'}}
-        transition={{
-          opacity: { ease: "linear" },
-          layout: { duration: 0.3 },
-        }}
+      <motion.div className="img-name-and-skills" animate={{ flexDirection: isOpen ? 'column-reverse' : 'row', transition: { duration: 0.5, ease: 'linear' } }}
       >
         <ProfileImg shouldBeFullScreen={isOpen} />
-        <div className="name-and-skill">
+        <motion.div className="name-and-skill" animate={{ gap: isOpen ? '12px' : '6px', transition: { duration: 0.5, ease: 'linear' } }}>
           <h1 className="name">Elephant Brand</h1>
-          <div className="skill">Creative direction</div>
-        </div>
+          <motion.div className="skill" animate={{ backgroundColor: isOpen ? 'rgba(0, 0, 0, 0.4)' : 'rgba(230, 229, 229, 0.2)'}}>Creative direction</motion.div>
+        </motion.div>
       </motion.div>
-      <p className="bio">hello bio text</p>
+      <p className="bio">We create things people love</p>
     </motion.div>
   );
 };

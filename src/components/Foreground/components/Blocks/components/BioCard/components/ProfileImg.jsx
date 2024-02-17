@@ -7,7 +7,7 @@ import "./ProfileImg.css";
 
 const ProfileImg = ({ shouldBeFullScreen}) => {
   return (
-    <motion.div className="profile-img-container" animate={{ width: shouldBeFullScreen ? '100%' : '64px', height: shouldBeFullScreen ? 'auto' : '64px', transition: { duration: 0.5 } }}>
+    <motion.div className="profile-img-container" animate={{ width: shouldBeFullScreen ? '100%' : '64px', height: shouldBeFullScreen ? 'auto' : '64px', borderRadius: shouldBeFullScreen ? '20px' : '8px', transition: { duration: 0.5 } }}>
       <div className="profile-img-wrapper">
         <img
           src={img}

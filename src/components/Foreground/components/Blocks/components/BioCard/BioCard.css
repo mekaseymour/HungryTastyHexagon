@@ -1,5 +1,4 @@
 .container {
-  padding: 12px;
   color: white;
   gap: 12px;
   display: flex;
@@ -8,6 +7,7 @@
   .bio {
     margin: 0;
     font-size: 1em;
+    font-weight: 600;
   }
 
   .name {
@@ -19,14 +19,13 @@
   .name-and-skill {
     display: flex;
     flex-direction: column;
-    gap: 6px;
   }
 
   .skill {
-    background-color: rgba(230, 229, 229, 0.2);
     border-radius: 12px;
     padding: 6px 12px;
     width: fit-content;
+    font-weight: 600;
   }
 }
 

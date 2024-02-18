@@ -4,10 +4,10 @@ import ForegroundBlur from "./components/ForegroundBlur";
 import Blocks from "./components/Blocks";
 import ActionsFooter from './components/ActionsFooter'
 
-const Foreground = ({ handleBlockToggle, isOpen }) => (
+const Foreground = () => (
   <>
-    <Blocks handleBlockToggle={handleBlockToggle} isOpen={isOpen} />
-    <ActionsFooter shouldBeVisible={isOpen} onBackClick={handleBlockToggle} />
+    <Blocks />
+    {/* <ActionsFooter shouldBeVisible={isOpen} onBackClick={handleBlockToggle} /> */}
     <ForegroundBlur />
   </>
 );

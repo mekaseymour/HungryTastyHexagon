@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
+
+import LayoutContext from '../../../../../../contexts/LayoutContext';
 
 import ProfileImg from "./components/ProfileImg.jsx";
 
 import "./BioCard.css";
 
-// referencing this https://codesandbox.io/p/sandbox/framer-motion-2-scale-correction-z4tgr?file=%2Fsrc%2FApp.js%3A23%2C3-33%2C5&from-embed=
+const BLOCK_ID = "bio";
 
-const BioCard = ({ isOpen, onToggle }) => {
+const BioCard = () => {
+  const { isBlockEngaged, engageBlock, disengageBlock } = useContext(LayoutContext);
+
+  const isOpen = isBlockEngaged(BLOCK_ID)
+
   return (
     <motion.div
       data-isOpen={isOpen}
@@ -29,7 +35,7 @@ const BioCard = ({ isOpen, onToggle }) => {
         transition: { duration: 0.2 },
       }}
       className="container"
-      onClick={isOpen ? () => {} : onToggle}
+      onClick={isOpen ? disengageBlock : () => engageBlock(BLOCK_ID)}
     >
       <motion.div
         className="img-name-and-skills"

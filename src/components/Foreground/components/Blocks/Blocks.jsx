@@ -4,9 +4,10 @@ import BioCard from "./components/BioCard";
 
 import "./Blocks.css";
 
-const Blocks = ({ handleBlockToggle, isOpen }) => (
+const Blocks = () => (
   <div className="blocks-container">
-    <BioCard isOpen={isOpen} onToggle={handleBlockToggle} />
+    <BioCard />
+    {/* <BioCard isOpen={isOpen} onToggle={handleBlockToggle} /> */}
   </div>
 );
 

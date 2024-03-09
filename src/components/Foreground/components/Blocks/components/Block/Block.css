@@ -1,0 +1,11 @@
+.block {
+  color: white;
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+}
+
+.block[data-isOpen="true"] {
+  padding: 60px 32px 32px;
+}

@@ -1,43 +1,30 @@
-.container {
-  color: white;
-  gap: 12px;
-  display: flex;
-  flex-direction: column;
-  padding: 12px;
-
-  .bio {
-    margin: 0;
-    font-size: 1em;
-    font-weight: 600;
-  }
-
-  .name {
-    margin: 0;
-    font-weight: 700;
-    font-size: 1.5em;
-  }
-
-  .name-and-skill {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .skill {
-    border-radius: 12px;
-    padding: 6px 12px;
-    width: fit-content;
-    font-weight: 600;
-  }
-}
-
-.container[data-isOpen="true"] {
-  /* padding: 22px 32px 0; */
-  padding: 60px 32px 32px;
-}
-
 .img-name-and-skills {
   display: flex;
   gap: 12px;
   transform: none;
   transform-origin: 50% 50% 0px;
+}
+
+.bio {
+  margin: 0;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.name {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.name-and-skill {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill {
+  border-radius: 12px;
+  padding: 6px 12px;
+  width: fit-content;
+  font-weight: 600;
 }

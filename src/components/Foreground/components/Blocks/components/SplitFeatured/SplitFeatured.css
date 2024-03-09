@@ -1,0 +1,31 @@
+.splitFeatured {
+  display: flex;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: white;
+  border-radius: 20px;
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+
+  h3 {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  img {
+    max-width: 100%;
+    flex: 1;
+    border-radius: inherit;
+  }
+}
+
+.splitFeatured.left {
+  flex: 0.6;
+}
+
+.splitFeatured.right {
+  flex: 0.4;
+}

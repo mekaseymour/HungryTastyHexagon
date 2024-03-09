@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 
 import LayoutContext from '../../../../../../contexts/LayoutContext';
 
+import Block from '../Block';
+
 import ProfileImg from "./components/ProfileImg.jsx";
 
 import "./BioCard.css";
@@ -15,28 +17,7 @@ const BioCard = () => {
   const isOpen = isBlockEngaged(BLOCK_ID)
 
   return (
-    <motion.div
-      data-isOpen={isOpen}
-      data-block-name="bio"
-      animate={{
-        ...(isOpen
-          ? {
-              backdropFilter: "blur(0px)",
-              backgroundColor: "rgba(0, 0, 0, 0)",
-              borderRadius: "32px",
-              opacity: "1",
-            }
-          : {
-              backdropFilter: "blur(30px)",
-              backgroundColor: "rgba(0, 0, 0, 0.25)",
-              borderRadius: "20px",
-              opacity: "1",
-            }),
-        transition: { duration: 0.2 },
-      }}
-      className="container"
-      onClick={isOpen ? disengageBlock : () => engageBlock(BLOCK_ID)}
-    >
+    <Block id={BLOCK_ID}>
       <motion.div
         className="img-name-and-skills"
         animate={{
@@ -66,7 +47,7 @@ const BioCard = () => {
         </motion.div>
       </motion.div>
       <p className="bio">We create things people love</p>
-    </motion.div>
+    </Block>
   );
 };
 

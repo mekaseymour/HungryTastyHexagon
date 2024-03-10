@@ -1,0 +1,12 @@
+.featured {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .split-featured-row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+  }
+}

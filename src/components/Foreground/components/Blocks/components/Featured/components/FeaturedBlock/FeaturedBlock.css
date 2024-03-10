@@ -1,12 +1,11 @@
-.splitFeatured {
+.featuredBlock {
   display: flex;
   justify-content: center;
   display: flex;
   flex-direction: column;
   gap: 6px;
   color: white;
-  border-radius: 20px;
-  padding: 12px;
+  border-radius: inherit;
   text-align: center;
   font-size: 14px;
 
@@ -22,10 +21,10 @@
   }
 }
 
-.splitFeatured.left {
+.featuredBlock.left {
   flex: 0.6;
 }
 
-.splitFeatured.right {
+.featuredBlock.right {
   flex: 0.4;
 }

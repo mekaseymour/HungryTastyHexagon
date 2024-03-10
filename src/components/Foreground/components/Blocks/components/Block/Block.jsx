@@ -29,7 +29,7 @@ const Block = ({ id, children }) => {
               backgroundColor: "rgba(0, 0, 0, 0.25)",
               borderRadius: "20px",
               opacity: "1",
-              height: "fit-content",
+              height: "auto",
             }),
         transition: { duration: 0.2 },
       }}

@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { motion } from "framer-motion";
 
 import LayoutContext from "../../../../../../../../contexts/LayoutContext";
 
@@ -22,14 +23,17 @@ const FeaturedBlock = ({ id }) => {
     else return null;
   };
 
+  console.log('id', id, 'engagedBlock', engagedBlock)
+
   const { img, title } = CONFIGS[id];
 
   return (
     <Block id={`featured-${id}`} layoutId={getBlockLayout()}>
-      <div className={`featuredBlock ${id}`}>
+      <motion.div className={`featuredBlock ${id}`} data-isOpen={`featured-${id}` === engagedBlock}>
+        <h1>{title}</h1>
         <img src={img} />
         <h3>{title}</h3>
-      </div>
+      </motion.div>
     </Block>
   );
 };

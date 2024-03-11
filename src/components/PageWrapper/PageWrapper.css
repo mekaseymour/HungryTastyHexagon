@@ -1,7 +1,9 @@
 .page-wrapper-container {
   inset: 0px;
-  position: fixed;
+  position: relative;
   z-index: 1;
+  overflow: hidden;
+  height: 100vh;
 
   .pwc-wrapper {
     display: flex;

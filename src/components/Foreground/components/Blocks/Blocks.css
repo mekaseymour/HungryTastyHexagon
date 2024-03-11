@@ -5,6 +5,7 @@
   gap: 10px;
   width: 100%;
   z-index: 2;
+  position: relative;
 
   .row {
     display: flex;
@@ -12,4 +13,22 @@
     gap: 10px;
     width: 100%;
   }
+
+  .quick-doors {
+    display: flex;
+    gap: 10px;
+  }
+
+  .quick-doors > :first-child {
+    flex: 1.5 0 0px;
+  }
+
+  .quick-doors > :last-child {
+    flex: 1 0 0px;
+  }
+}
+
+.blocks-container[data-isOffScreen="true"] {
+  position: absolute;
+  top: -100vh;
 }

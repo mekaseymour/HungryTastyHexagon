@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
 
-import LayoutContext from '../../../../../../contexts/LayoutContext';
+import LayoutContext from "../../../../../../contexts/LayoutContext";
 
-import Block from '../Block';
+import Block from "../Block";
 
 import ProfileImg from "./components/ProfileImg.jsx";
 
@@ -12,12 +12,16 @@ import "./BioCard.css";
 const BLOCK_ID = "bio";
 
 const BioCard = () => {
-  const { isBlockEngaged, engageBlock, disengageBlock } = useContext(LayoutContext);
+  const { isBlockEngaged, engageBlock, disengageBlock, engagedBlock } =
+    useContext(LayoutContext);
 
-  const isOpen = isBlockEngaged(BLOCK_ID)
+  const isOpen = isBlockEngaged(BLOCK_ID);
+  const isFeatureBlockOpen = !!engagedBlock?.includes("featured");
+
+  console.log("isFeatureBlockOpen", isFeatureBlockOpen);
 
   return (
-    <Block id={BLOCK_ID}>
+    <Block id={BLOCK_ID} layoutId={isFeatureBlockOpen ? 'offScreenTop' : null}>
       <motion.div
         className="img-name-and-skills"
         animate={{

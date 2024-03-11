@@ -5,7 +5,7 @@ import LayoutContext from "../../../../../../contexts/LayoutContext";
 
 import "./Block.css";
 
-const Block = ({ id, children }) => {
+const Block = ({ id, children, layoutId }) => {
   const { isBlockEngaged, engageBlock, disengageBlock } =
     useContext(LayoutContext);
 
@@ -13,8 +13,10 @@ const Block = ({ id, children }) => {
 
   return (
     <motion.div
+      layout
       className="block"
       data-isOpen={isOpen}
+      data-layout={layoutId}
       animate={{
         ...(isOpen
           ? {

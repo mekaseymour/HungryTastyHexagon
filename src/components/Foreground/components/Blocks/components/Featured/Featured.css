@@ -9,4 +9,12 @@
     gap: 10px;
     width: 100%;
   }
+
+  /* Reused in Block.css */
+  .split-featured-row[data-layout="offScreenTop"] {
+    height: 20%;
+    position: absolute;
+    top: -100vh;
+    left: calc(2.13163e-14%);
+  }
 }

@@ -16,9 +16,8 @@ const BioCard = () => {
     useContext(LayoutContext);
 
   const isOpen = isBlockEngaged(BLOCK_ID);
+  // Reused in Featured.jsx
   const isFeatureBlockOpen = !!engagedBlock?.includes("featured");
-
-  console.log("isFeatureBlockOpen", isFeatureBlockOpen);
 
   return (
     <Block id={BLOCK_ID} layoutId={isFeatureBlockOpen ? 'offScreenTop' : null}>

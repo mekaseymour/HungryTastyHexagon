@@ -10,6 +10,7 @@
   padding: 60px 32px 32px;
 }
 
+/* Reused in Featured.css */
 .block[data-layout="offScreenTop"] {
   height: 20%;
   position: absolute;

@@ -23,8 +23,6 @@ const FeaturedBlock = ({ id }) => {
     else return null;
   };
 
-  console.log('id', id, 'engagedBlock', engagedBlock)
-
   const { img, title } = CONFIGS[id];
 
   return (

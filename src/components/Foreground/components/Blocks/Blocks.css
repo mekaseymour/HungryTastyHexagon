@@ -6,8 +6,7 @@
   width: 100%;
   z-index: 2;
   position: relative;
-  /* opacity: 1;
- */
+
   .row {
     display: flex;
     flex-direction: row;
@@ -32,5 +31,4 @@
 .blocks-container[data-isOffScreen="true"] {
   position: absolute;
   top: -200vh;
-  /* opacity: 0; */
 }

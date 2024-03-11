@@ -16,7 +16,9 @@ const Blocks = () => {
     useContext(LayoutContext);
 
   return (
-    <motion.div className="blocks-container" data-isOffScreen={!!openedRoomId} layout>
+    <motion.div className="blocks-container" data-isOffScreen={!!openedRoomId} layout
+      animate={{ opacity: !!openedRoomId ? 0 : 1 }}
+      transition={{ duration: 0.5 }}>
       <BioCard />
     <Featured />
       <div className="quick-doors">

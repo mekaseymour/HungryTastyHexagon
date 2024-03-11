@@ -17,3 +17,21 @@
   top: -100vh;
   left: calc(2.13163e-14%);
 }
+
+.block[data-layout="offScreenLeft"] {
+  flex: 0 0 auto;
+  left: -200vw;
+  position: absolute;
+  top: calc(2.13163e-14%);
+  width: 100%;
+  z-index: 1;
+}
+
+.block[data-layout="offScreenRight"] {
+  flex: 0 0 auto;
+  position: absolute;
+  right: -200vw;
+  top: calc(2.13163e-14%);
+  width: 100%;
+  z-index: 1;
+}
